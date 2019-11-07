@@ -1,0 +1,30 @@
+.btn {
+	text-decoration: none;
+    padding: 1rem;
+    margin: 0 auto;
+    display: inline-block;
+    font-size: .8rem;
+    border-radius: 10rem;
+    text-align: center;
+	transition: .3s ease-in-out;
+	background: #333;
+    color: #fff;
+}
+
+.btn:hover {
+	box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+}
+
+.txt--bold {
+	font-weight: bold;
+}
+
+.txt--gray {
+	color: #999999;
+}
+
+.scroll--animate {
+	transition: .3s;
+}

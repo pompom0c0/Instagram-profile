@@ -1,0 +1,45 @@
+$breakpoint: 960px;
+
+@mixin sp {
+  @media screen and (max-width: ($breakpoint - 1)) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+body {
+	font-family: 'Noto Sans JP', sans-serif;
+}
+.container {
+	width: 980px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.main {
+	height: 100vh;
+	background: #fafafa;
+}
+
+.section {
+	height: 500px;
+}
+
+.loader {
+	position: relative;
+	background: #fff;
+	z-index: 100;
+	svg {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+	}
+}
