@@ -198,6 +198,9 @@
 				<div class="modal__wrap">
 					<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="26" height="26" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M96.49159,23.72236l-62.27765,62.27764l62.27765,62.27765l18.70913,-18.70913l-43.56851,-43.56851l43.56851,-43.56851z"></path></g></g></svg>
 					<div class="modal__contents">
+						<div class="modal__arrow modal__arrow--left">
+							<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M110.55031,10.535c-0.90031,0 -1.74688,0.36281 -2.39188,0.99438l-72.52219,71.94437c-1.35719,1.34375 -1.37062,3.52063 -0.02687,4.86438l71.94437,72.53562c1.34375,1.34375 3.52063,1.35719 4.86438,0.01344l20.72062,-20.54594c1.35719,-1.34375 1.37063,-3.52062 0.02688,-4.87781l-48.96625,-49.35594l49.36937,-48.96625c1.34375,-1.34375 1.35719,-3.52062 0.01344,-4.86437l-20.54594,-20.72063c-0.65844,-0.67187 -1.55875,-1.03469 -2.48594,-1.02125z"></path></g></g></svg>
+						</div>
 						<div class="modal__img">
 							<ul class="modal__img--wrap">
 								<li class="js-slide js-active"><img src="images/photo/01.jpg"></li>
@@ -259,8 +262,14 @@
 										<li class="modal__icon modal__icon--share"><img src="https://img.icons8.com/ios/64/000000/upload.png"></li>
 										<li class="modal__icon modal__icon--save"><img src="https://img.icons8.com/ios/50/000000/cancer-ribbon.png"></li>
 									</ul>
-									<div class="modal__details--users">
-
+									<div class="modal__users">
+										<div class="modal__users--img">
+											<img src="https://scontent-nrt1-1.cdninstagram.com/vp/f11eedafa61a52fb36380163eba3966f/5E36A314/t51.2885-19/s150x150/11875390_1640475839575400_2050288559_a.jpg?_nc_ht=scontent-nrt1-1.cdninstagram.com">
+										</div>
+										<div class="modal__users--text">
+											<p><span class="txt--bold">maiki_shinbo</span>、<span class="txt--bold">他◯人</span>が「いいね！」しました。</p>
+											<span class="txt--xx txt--gray">2時間前</span>
+										</div>
 									</div>
 								</div>
 								<div class="modal__comment">
@@ -273,6 +282,9 @@
 								</div>
 							</div>
 						</div>
+						<div class="modal__arrow modal__arrow--right">
+							<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M62.39031,10.32c-0.90031,0.01344 -1.74688,0.36281 -2.39188,0.99438l-20.72062,20.55937c-1.34375,1.34375 -1.35719,3.52063 -0.02688,4.86438l48.96625,49.36937l-49.35594,48.96625c-1.35719,1.34375 -1.37062,3.52063 -0.02687,4.86438l20.55937,20.72062c1.34375,1.35719 3.52063,1.37063 4.86438,0.02688l72.53562,-71.94438c1.34375,-1.34375 1.35719,-3.52062 0.01344,-4.87781l-71.93094,-72.52219c-0.65844,-0.67187 -1.55875,-1.03469 -2.48594,-1.02125z"></path></g></g></svg>
+						</div>
 					</div>
 					<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="26" height="26" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M75.50842,23.72236l-18.70913,18.70913l43.56851,43.56851l-43.56851,43.56851l18.70913,18.70913l62.27764,-62.27765z"></path></g></g></svg>
 				</div>
@@ -280,96 +292,98 @@
 		</div>
 		<div class="nav-like">
 			<div class="nav-like__mask">
-				<ul class="nav-like__wrap">
-					<li class="nav-like__list">
-						<div class="nav-like__list--img">
-							<img src="https://scontent-nrt1-1.cdninstagram.com/vp/f11eedafa61a52fb36380163eba3966f/5E36A314/t51.2885-19/s150x150/11875390_1640475839575400_2050288559_a.jpg?_nc_ht=scontent-nrt1-1.cdninstagram.com">
-						</div>
-						<div class="nav-like__list--text">
-							<p><span class="txt--bold">maiki_shinbo</span>があなたの写真に「いいね！」しました。<span class="txt--gray">2時間前</span></p>
-						</div>
-						<div class="nav-like__list--btn">
-								<img src="images/photo/02.jpg">
-						</div>
-					</li>
-					<li class="nav-like__list">
-						<div class="nav-like__list--img">
-							<img src="https://scontent-nrt1-1.cdninstagram.com/vp/f11eedafa61a52fb36380163eba3966f/5E36A314/t51.2885-19/s150x150/11875390_1640475839575400_2050288559_a.jpg?_nc_ht=scontent-nrt1-1.cdninstagram.com">
-						</div>
-						<div class="nav-like__list--text">
-							<p><span class="txt--bold">maiki_shinbo</span>があなたの写真に「いいね！」しました。<span class="txt--gray">2時間前</span></p>
-						</div>
-						<div class="nav-like__list--btn">
-								<img src="images/photo/02.jpg">
-						</div>
-					</li>
-					<li class="nav-like__list">
-						<div class="nav-like__list--img">
-							<img src="https://scontent-nrt1-1.cdninstagram.com/vp/f11eedafa61a52fb36380163eba3966f/5E36A314/t51.2885-19/s150x150/11875390_1640475839575400_2050288559_a.jpg?_nc_ht=scontent-nrt1-1.cdninstagram.com">
-						</div>
-						<div class="nav-like__list--text">
-							<p><span class="txt--bold">maiki_shinbo</span>があなたの写真に「いいね！」しました。<span class="txt--gray">2時間前</span></p>
-						</div>
-						<div class="nav-like__list--btn">
-								<img src="images/photo/02.jpg">
-						</div>
-					</li>
-					<li class="nav-like__list">
-						<div class="nav-like__list--img">
-							<img src="https://scontent-nrt1-1.cdninstagram.com/vp/f11eedafa61a52fb36380163eba3966f/5E36A314/t51.2885-19/s150x150/11875390_1640475839575400_2050288559_a.jpg?_nc_ht=scontent-nrt1-1.cdninstagram.com">
-						</div>
-						<div class="nav-like__list--text">
-							<p><span class="txt--bold">maiki_shinbo</span>があなたの写真に「いいね！」しました。<span class="txt--gray">2時間前</span></p>
-						</div>
-						<div class="nav-like__list--btn">
-								<img src="images/photo/02.jpg">
-						</div>
-					</li>
-					<li class="nav-like__list">
-						<div class="nav-like__list--img">
-							<img src="https://scontent-nrt1-1.cdninstagram.com/vp/f11eedafa61a52fb36380163eba3966f/5E36A314/t51.2885-19/s150x150/11875390_1640475839575400_2050288559_a.jpg?_nc_ht=scontent-nrt1-1.cdninstagram.com">
-						</div>
-						<div class="nav-like__list--text">
-							<p><span class="txt--bold">maiki_shinbo</span>があなたの写真に「いいね！」しました。<span class="txt--gray">2時間前</span></p>
-						</div>
-						<div class="nav-like__list--btn">
-								<img src="images/photo/02.jpg">
-						</div>
-					</li>
-					<li class="nav-like__list">
-						<div class="nav-like__list--img">
-							<img src="https://scontent-nrt1-1.cdninstagram.com/vp/f11eedafa61a52fb36380163eba3966f/5E36A314/t51.2885-19/s150x150/11875390_1640475839575400_2050288559_a.jpg?_nc_ht=scontent-nrt1-1.cdninstagram.com">
-						</div>
-						<div class="nav-like__list--text">
-							<p><span class="txt--bold">maiki_shinbo</span>があなたの写真に「いいね！」しました。<span class="txt--gray">2時間前</span></p>
-						</div>
-						<div class="nav-like__list--btn">
-								<img src="images/photo/02.jpg">
-						</div>
-					</li>
-					<li class="nav-like__list">
-						<div class="nav-like__list--img">
-							<img src="https://scontent-nrt1-1.cdninstagram.com/vp/f11eedafa61a52fb36380163eba3966f/5E36A314/t51.2885-19/s150x150/11875390_1640475839575400_2050288559_a.jpg?_nc_ht=scontent-nrt1-1.cdninstagram.com">
-						</div>
-						<div class="nav-like__list--text">
-							<p><span class="txt--bold">maiki_shinbo</span>があなたの写真に「いいね！」しました。<span class="txt--gray">2時間前</span></p>
-						</div>
-						<div class="nav-like__list--btn">
-								<img src="images/photo/02.jpg">
-						</div>
-					</li>
-					<li class="nav-like__list">
-						<div class="nav-like__list--img">
-							<img src="https://scontent-nrt1-1.cdninstagram.com/vp/f11eedafa61a52fb36380163eba3966f/5E36A314/t51.2885-19/s150x150/11875390_1640475839575400_2050288559_a.jpg?_nc_ht=scontent-nrt1-1.cdninstagram.com">
-						</div>
-						<div class="nav-like__list--text">
-							<p><span class="txt--bold">maiki_shinbo</span>があなたの写真に「いいね！」しました。<span class="txt--gray">2時間前</span></p>
-						</div>
-						<div class="nav-like__list--btn">
-								<img src="images/photo/02.jpg">
-						</div>
-					</li>
-				</ul>
+				<div class="nav-like__body">
+					<ul class="nav-like__wrap">
+						<li class="nav-like__list">
+							<div class="nav-like__list--img">
+								<img src="https://scontent-nrt1-1.cdninstagram.com/vp/f11eedafa61a52fb36380163eba3966f/5E36A314/t51.2885-19/s150x150/11875390_1640475839575400_2050288559_a.jpg?_nc_ht=scontent-nrt1-1.cdninstagram.com">
+							</div>
+							<div class="nav-like__list--text">
+								<p><span class="txt--bold">maiki_shinbo</span>があなたの写真に「いいね！」しました。<span class="txt--gray">2時間前</span></p>
+							</div>
+							<div class="nav-like__list--btn">
+									<img src="images/photo/02.jpg">
+							</div>
+						</li>
+						<li class="nav-like__list">
+							<div class="nav-like__list--img">
+								<img src="https://scontent-nrt1-1.cdninstagram.com/vp/f11eedafa61a52fb36380163eba3966f/5E36A314/t51.2885-19/s150x150/11875390_1640475839575400_2050288559_a.jpg?_nc_ht=scontent-nrt1-1.cdninstagram.com">
+							</div>
+							<div class="nav-like__list--text">
+								<p><span class="txt--bold">maiki_shinbo</span>があなたの写真に「いいね！」しました。<span class="txt--gray">2時間前</span></p>
+							</div>
+							<div class="nav-like__list--btn">
+									<img src="images/photo/02.jpg">
+							</div>
+						</li>
+						<li class="nav-like__list">
+							<div class="nav-like__list--img">
+								<img src="https://scontent-nrt1-1.cdninstagram.com/vp/f11eedafa61a52fb36380163eba3966f/5E36A314/t51.2885-19/s150x150/11875390_1640475839575400_2050288559_a.jpg?_nc_ht=scontent-nrt1-1.cdninstagram.com">
+							</div>
+							<div class="nav-like__list--text">
+								<p><span class="txt--bold">maiki_shinbo</span>があなたの写真に「いいね！」しました。<span class="txt--gray">2時間前</span></p>
+							</div>
+							<div class="nav-like__list--btn">
+									<img src="images/photo/02.jpg">
+							</div>
+						</li>
+						<li class="nav-like__list">
+							<div class="nav-like__list--img">
+								<img src="https://scontent-nrt1-1.cdninstagram.com/vp/f11eedafa61a52fb36380163eba3966f/5E36A314/t51.2885-19/s150x150/11875390_1640475839575400_2050288559_a.jpg?_nc_ht=scontent-nrt1-1.cdninstagram.com">
+							</div>
+							<div class="nav-like__list--text">
+								<p><span class="txt--bold">maiki_shinbo</span>があなたの写真に「いいね！」しました。<span class="txt--gray">2時間前</span></p>
+							</div>
+							<div class="nav-like__list--btn">
+									<img src="images/photo/02.jpg">
+							</div>
+						</li>
+						<li class="nav-like__list">
+							<div class="nav-like__list--img">
+								<img src="https://scontent-nrt1-1.cdninstagram.com/vp/f11eedafa61a52fb36380163eba3966f/5E36A314/t51.2885-19/s150x150/11875390_1640475839575400_2050288559_a.jpg?_nc_ht=scontent-nrt1-1.cdninstagram.com">
+							</div>
+							<div class="nav-like__list--text">
+								<p><span class="txt--bold">maiki_shinbo</span>があなたの写真に「いいね！」しました。<span class="txt--gray">2時間前</span></p>
+							</div>
+							<div class="nav-like__list--btn">
+									<img src="images/photo/02.jpg">
+							</div>
+						</li>
+						<li class="nav-like__list">
+							<div class="nav-like__list--img">
+								<img src="https://scontent-nrt1-1.cdninstagram.com/vp/f11eedafa61a52fb36380163eba3966f/5E36A314/t51.2885-19/s150x150/11875390_1640475839575400_2050288559_a.jpg?_nc_ht=scontent-nrt1-1.cdninstagram.com">
+							</div>
+							<div class="nav-like__list--text">
+								<p><span class="txt--bold">maiki_shinbo</span>があなたの写真に「いいね！」しました。<span class="txt--gray">2時間前</span></p>
+							</div>
+							<div class="nav-like__list--btn">
+									<img src="images/photo/02.jpg">
+							</div>
+						</li>
+						<li class="nav-like__list">
+							<div class="nav-like__list--img">
+								<img src="https://scontent-nrt1-1.cdninstagram.com/vp/f11eedafa61a52fb36380163eba3966f/5E36A314/t51.2885-19/s150x150/11875390_1640475839575400_2050288559_a.jpg?_nc_ht=scontent-nrt1-1.cdninstagram.com">
+							</div>
+							<div class="nav-like__list--text">
+								<p><span class="txt--bold">maiki_shinbo</span>があなたの写真に「いいね！」しました。<span class="txt--gray">2時間前</span></p>
+							</div>
+							<div class="nav-like__list--btn">
+									<img src="images/photo/02.jpg">
+							</div>
+						</li>
+						<li class="nav-like__list">
+							<div class="nav-like__list--img">
+								<img src="https://scontent-nrt1-1.cdninstagram.com/vp/f11eedafa61a52fb36380163eba3966f/5E36A314/t51.2885-19/s150x150/11875390_1640475839575400_2050288559_a.jpg?_nc_ht=scontent-nrt1-1.cdninstagram.com">
+							</div>
+							<div class="nav-like__list--text">
+								<p><span class="txt--bold">maiki_shinbo</span>があなたの写真に「いいね！」しました。<span class="txt--gray">2時間前</span></p>
+							</div>
+							<div class="nav-like__list--btn">
+									<img src="images/photo/02.jpg">
+							</div>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</main>
