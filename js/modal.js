@@ -1,11 +1,13 @@
 $(function() {
 	$('.photo__img').on('click', function() {
 		$('.modal').show();
+		$('body').addClass('scroll--none');
 	});
 
 	$('.modal').on('click', function(e) {
 		if ($(e.target).parents('.modal__wrap').length == 0) {
 			$(this).hide();
+			$('body').removeClass('scroll--none');
 		}
 		// console.log($(e.target));
 		// console.log($(e.target).parents('.modal__wrap'));
