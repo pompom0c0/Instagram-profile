@@ -666,6 +666,7 @@ body {
   height: 20px;
   border-radius: 50%;
   object-fit: cover;
+  cursor: pointer;
 }
 
 .modal__users--text {
