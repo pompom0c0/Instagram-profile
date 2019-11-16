@@ -1,9 +1,48 @@
 @import 'reset';
 @import 'base';
-@import 'component';
 
-// header ///////////////////////////////////////////
-.header {
+// component ///////////////////////////////////
+.btn {
+	text-decoration: none;
+    padding: 1rem;
+    margin: 0 auto;
+    display: inline-block;
+    font-size: .8rem;
+    border-radius: 10rem;
+    text-align: center;
+	transition: .3s ease-in-out;
+	background: #333;
+    color: #fff;
+}
+
+.btn:hover {
+	box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+}
+
+.txt--bold {
+	font-weight: bold;
+}
+
+.txt--gray {
+	color: #999999;
+}
+
+.txt--xx {
+    font-size: 10px;
+}
+
+.scroll-animate {
+    transform: .3s;
+}
+
+.scroll-none {
+	overflow: hidden;
+}
+
+// header /////////////////////////////////////////
+.global-nav {
 	text-transform: uppercase;
 	background: #fff;
 	border-bottom: 1px solid #dbdbdb;
@@ -27,7 +66,7 @@
 		svg {
 			padding-right: .5rem;
 		}
-		&--insta {
+		img {
 			height: 30px;
 			border-left: 1px solid #262626;
 			padding-left: .9rem;
@@ -330,17 +369,18 @@
 			display: flex;
 			width: 600px;
 			overflow: hidden;
-			.js-slide {
+			.js-slide-image {
 				display: none;
 			}
-			.js-active {
+			.active {
 				display: block;
 			}
 		}
 		img {
 			width: 600px;
 			height: 600px;
-		}
+        }
+        
 	}
 	&__text {
 		width: 335px;
@@ -355,7 +395,8 @@
 		display: flex;
 		align-items: center;
 		padding: 16px;
-		border-bottom: 1px solid #efefef;
+        border-bottom: 1px solid #efefef;
+        height: 34px;
 		&--img {
 			padding-right: 16px;
 			img {

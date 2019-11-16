@@ -1,9 +1,5 @@
 $(function() {
-	$('#nav-toggle').on('click', function() {
-		$('.header ul').toggleClass('slow');
-	});
-
-	$('.photo__img').hover(
+	$('.js-photo-hover').hover(
 		function() {
 			$(this).find('.photo__mask').show();
 		},

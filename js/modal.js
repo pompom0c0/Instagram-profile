@@ -1,13 +1,13 @@
 $(function() {
 	$('.photo__img').on('click', function() {
-		$('.modal').show();
-		$('body').addClass('scroll--none');
+		$('#modal').show();
+		$('body').addClass('scroll-none');
 	});
 
-	$('.modal').on('click', function(e) {
-		if ($(e.target).parents('.modal__wrap').length == 0) {
+	$('#modal').on('click', function(e) {
+		if ($(e.target).parents('#modal-wrap').length == 0) {
 			$(this).hide();
-			$('body').removeClass('scroll--none');
+			$('body').removeClass('scroll-none');
 		}
 		// console.log($(e.target));
 		// console.log($(e.target).parents('.modal__wrap'));
@@ -15,15 +15,15 @@ $(function() {
 	});
 
 	$('.js-change-btn').on('click', function() {
-		var $displaySlide = $('.js-active');
-		$displaySlide.removeClass('js-active');
+		var $displaySlide = $('.js-slide-image').filter('.active');
+		$displaySlide.removeClass('active');
 		if($(this).hasClass('next')) {
-			$displaySlide.next().addClass('js-active');
+			$displaySlide.next().addClass('active');
 		} else {
-			$displaySlide.prev().addClass('js-active');
+			$displaySlide.prev().addClass('active');
 		}
 
-		var slideIndex = $('.js-slide').index($('.js-active'));
+		var slideIndex = $('.js-slide-image').index($('.active'));
 		$('.js-change-btn').show();
 
 		if(slideIndex === 0) {
@@ -37,7 +37,7 @@ $(function() {
 	});
 
 	// コメント欄の高さ調節
-	const commentTextarea = document.querySelector('.modal__comment--textarea');
+	const commentTextarea = document.querySelector('#modal-comment-area');
 	commentTextarea.addEventListener('input', () => {
 		commentTextarea.style.height = "20px";
 		commentTextarea.style.height = commentTextarea.scrollHeight + "px";
@@ -45,7 +45,7 @@ $(function() {
 
 	// コメントtextareaに入力されたら、投稿ボタンが押せるようになる
 	$('textarea[type="text"]').on('keyup', function() {
-		const $submitBtn = $('.modal__comment--submit input');
+		const $submitBtn = $('#modal-comment-submit input');
 		if ($(this).val() == '') {
 			$submitBtn.removeClass('active');
 		} else {
@@ -54,7 +54,7 @@ $(function() {
 	});
 
 	// 改行禁止
-	$('.modal__comment--textarea').on('keypress', function(enter) {
+	$('#modal-comment-area').on('keypress', function(enter) {
 		if(enter.key == 'Enter'){
 			return false;
 		}
@@ -71,8 +71,8 @@ $(function() {
 	// 投稿ボタンを押したら、コメントを表示する
 	$('input[type="submit"]').on('click', function() {
 		const $result = $('textarea[type="text"]').val();
-		const $submitBtn = $('.modal__comment--submit input');
-		$('.modal__post').append('<div class="modal__post--content"><div class="modal__post--img"><img src="https://scontent-nrt1-1.cdninstagram.com/vp/f11eedafa61a52fb36380163eba3966f/5E36A314/t51.2885-19/s150x150/11875390_1640475839575400_2050288559_a.jpg?_nc_ht=scontent-nrt1-1.cdninstagram.com"></div><div class="modal__post--text"><p class="text__post"><span class="text__name">pompom0c0</span>'+$result+'</p></div></div>');
+		const $submitBtn = $('#modal-comment-submit input');
+		$('#modal-post-comment').append('<div class="modal__post--content"><div class="modal__post--img"><img src="https://scontent-nrt1-1.cdninstagram.com/vp/f11eedafa61a52fb36380163eba3966f/5E36A314/t51.2885-19/s150x150/11875390_1640475839575400_2050288559_a.jpg?_nc_ht=scontent-nrt1-1.cdninstagram.com"></div><div class="modal__post--text"><p class="text__post"><span class="text__name">pompom0c0</span>'+$result+'</p></div></div>');
 		$('textarea[type="text"]').val('');
 		$submitBtn.removeClass('active');
 		commentTextarea.style.height = "20px";
