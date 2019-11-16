@@ -21,15 +21,15 @@
     transform: translateY(-8px);
 }
 
-.txt--bold {
+.txt-bold {
 	font-weight: bold;
 }
 
-.txt--gray {
+.txt-gray {
 	color: #999999;
 }
 
-.txt--xx {
+.txt-xx {
     font-size: 10px;
 }
 
@@ -74,7 +74,7 @@
 	}
 	&__search {
 		width: (980px/3);
-		&--wrap {
+		&-wrap {
 			width: 215px;
 			box-sizing: border-box;
 			background: #fafafa;
@@ -103,9 +103,9 @@
 			outline: 0;
 			text-align: left;
 			padding-left: 1.2rem;
-			&+.search--icon {
+			&+.global-nav__search-icon {
 				left: 0;
-				&+.search--reset {
+				&+.global-nav__search-reset {
 					display: block;
 				}
 			}
@@ -124,7 +124,7 @@
 			top: -10px;
 			outline: none;
 		}
-		.search--icon {
+		&-icon {
 			width: 15px;
 			height: 15px;
 			line-height: 1.45;
@@ -137,7 +137,7 @@
 				line-height: 1.4;
 			}
 		}
-		.search--reset {
+		&-reset {
 			position: absolute;
 			top: 1px;
 			right: 0;
@@ -154,7 +154,7 @@
 	&__nav {
 		width: (980px/3);
 		text-align: right;
-		&--icon {
+		&-icon {
 			padding-right: 25px;
 			cursor: pointer;
 			display: inline-block;
@@ -205,7 +205,7 @@
 		margin: 16px 16px 0 16px;
 		padding-bottom: 16px;
 		border-bottom: 1px solid #efefef;
-		&--img {
+		&-img {
 			img {
 				width: 34px;
 				height: 34px;
@@ -213,7 +213,7 @@
 				object-fit: cover;
 			}
 		}
-		&--text {
+		&-text {
 			padding: 0 12px;
 			width: 370px;
 			font-size: 14px;
@@ -221,7 +221,7 @@
 			text-align: left;
 			font-size: 14px;
 		}
-		&--btn {
+		&-btn {
 			img {
 				width: 40px;
 				height: 40px;
@@ -317,17 +317,16 @@
 			height: 40px;
 		}
 	}
-
 	&__img {
 		position: relative;
-		&--dot-wrap {
+		&-dot-wrap {
 			position: absolute;
 			bottom: 10px;
 			left: 0;
 			right: 0;
 			z-index: 100;
 		}
-		&--dot {
+		&-dot {
 			display: flex;
 			justify-content: center;
 			list-style: none;
@@ -347,7 +346,7 @@
 				background-color: #fff;
 			}
 		}
-		&--pager {
+		&-pager {
 			color: #fff;
 			opacity: 0.8;
 			cursor: pointer;
@@ -365,7 +364,7 @@
 				font-size: 1.3rem;
 			}
 		}
-		&--wrap {
+		&-wrap {
 			display: flex;
 			width: 600px;
 			overflow: hidden;
@@ -386,7 +385,7 @@
 		width: 335px;
 		display: flex;
 		flex-direction: column;
-		&--bottom {
+		&-bottom {
 			margin-top: auto;
 			background: #fff;
 		}
@@ -397,7 +396,7 @@
 		padding: 16px;
         border-bottom: 1px solid #efefef;
         height: 34px;
-		&--img {
+		&-img {
 			padding-right: 16px;
 			img {
 				width: 32px;
@@ -406,12 +405,12 @@
 				object-fit: cover;
 			}
 		}
-		&--text {
+		&-text {
 			font-size: 14px;
 			font-weight: bold;
 			flex: 1;
 		}
-		&--menu {
+		&-menu {
 			img {
 				width: 24px;
 				height: 24px;
@@ -423,10 +422,10 @@
 		min-height: 315px;
 		max-height: 315px;
 		overflow-y: auto;
-		&--content {
+		&-content {
 			display: flex;
 		}
-		&--img {
+		&-img {
 			padding-right: 16px;
 			img {
 				width: 32px;
@@ -435,19 +434,27 @@
 				object-fit: cover;
 			}
 		}
-		&--text {
+		&-text {
 			font-size: 14px;
 			flex: 1;
 			padding-top: .3rem;
 			line-height: 1.4;
-			color: #262626;
+            color: #262626;
+            margin-bottom: 1rem;
 		}
+        &-name {
+            padding-right: .3rem;
+            font-weight: bold;
+        }
+        &-tag {
+            color: #003569;
+        }
 	}
 	&__details {
 		li {
 			list-style: none;
 		}
-		&--icons {
+		&-icons {
 			display: flex;
 			border-top: 1px solid #efefef;
 			padding: 0 10px;
@@ -468,7 +475,7 @@
 		margin: 0 16px 0 16px;
 		padding-bottom: 16px;
 		border-bottom: 1px solid #efefef;
-		&--img {
+		&-img {
 			img {
 				width: 20px;
 				height: 20px;
@@ -477,7 +484,7 @@
 				cursor: pointer;
 			}
 		}
-		&--text {
+		&-text {
 			padding: 0 8px;
 			width: 370px;
 			font-size: 14px;
@@ -502,16 +509,16 @@
 			border: none;
 			outline: none;
 		}
-		&--textarea {
+		&-textarea {
 			min-height: 20px;
 			max-height: 80px;
 		}
-		&--form {
+		&-form {
 			display: flex;
 			flex-direction: row;
 			align-items: center;
 		}
-		&--submit {
+		&-submit {
 			padding: 16px 0;
 			margin-left: auto;
 			input {
@@ -529,15 +536,5 @@
 				}
 			}
 		}
-	}
-	.text__post {
-		margin-bottom: 1rem;
-	}
-	.text__name {
-		padding-right: .3rem;
-		font-weight: bold;
-	}
-	.text__tag {
-		color: #003569;
 	}
 }

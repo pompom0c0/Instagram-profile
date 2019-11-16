@@ -72,7 +72,7 @@ $(function() {
 	$('input[type="submit"]').on('click', function() {
 		const $result = $('textarea[type="text"]').val();
 		const $submitBtn = $('#modal-comment-submit input');
-		$('#modal-post-comment').append('<div class="modal__post--content"><div class="modal__post--img"><img src="https://scontent-nrt1-1.cdninstagram.com/vp/f11eedafa61a52fb36380163eba3966f/5E36A314/t51.2885-19/s150x150/11875390_1640475839575400_2050288559_a.jpg?_nc_ht=scontent-nrt1-1.cdninstagram.com"></div><div class="modal__post--text"><p class="text__post"><span class="text__name">pompom0c0</span>'+$result+'</p></div></div>');
+		$('#modal-post-comment').append('<div class="modal__post-content"><div class="modal__post-img"><img src="https://scontent-nrt1-1.cdninstagram.com/vp/f11eedafa61a52fb36380163eba3966f/5E36A314/t51.2885-19/s150x150/11875390_1640475839575400_2050288559_a.jpg?_nc_ht=scontent-nrt1-1.cdninstagram.com"></div><div class="modal__post-text"><p><span class="modal__post-name">pompom0c0</span>'+$result+'</p></div></div>');
 		$('textarea[type="text"]').val('');
 		$submitBtn.removeClass('active');
 		commentTextarea.style.height = "20px";
