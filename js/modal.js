@@ -78,4 +78,32 @@ $(function() {
 		commentTextarea.style.height = "20px";
 		return false;
 	});
+
+	// いいねしたらアイコンが変わる
+	$('#modal-icon-heart').on('click', function() {
+		if($(this).children('img').attr('src').indexOf('border') !== -1) {
+			$(this).children('img').attr('src', 'images/icon/icon-heart-red.png');
+		} else {
+			$(this).children('img').attr('src', 'images/icon/icon-heart-border.png');
+		}
+	});
+
+	$('#modal-icon-share').on('click', function() {
+		$('#modal-share').show();
+	});
+	$('#modal-share-close').on('click', function() {
+		$('#modal-share').hide();
+	});
+	$('#modal-share-mask').on('click', function() {
+		$('#modal-share').hide();
+	});
+	$('#modal-share-link').on('click', function() {
+		$(document.body).append("<textarea id=\"copyTarget\" style=\"position:absolute; left:-9999px; top:0px;\" readonly=\"readonly\">" + location.href + "</textarea>");
+		let obj = document.getElementById('copyTarget');
+		let range = document.createRange();
+		range.selectNode(obj);
+		window.getSelection().addRange(range);
+		document.execCommand('copy');
+		console.log();
+	});
 });
