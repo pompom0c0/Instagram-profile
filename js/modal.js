@@ -97,13 +97,21 @@ $(function() {
 	$('#modal-share-mask').on('click', function() {
 		$('#modal-share').hide();
 	});
+
+	// リンクをコピーする
 	$('#modal-share-link').on('click', function() {
-		$(document.body).append("<textarea id=\"copyTarget\" style=\"position:absolute; left:-9999px; top:0px;\" readonly=\"readonly\">" + location.href + "</textarea>");
-		let obj = document.getElementById('copyTarget');
-		let range = document.createRange();
-		range.selectNode(obj);
-		window.getSelection().addRange(range);
+		console.log(location.href);
+
+		// コピーするURLをテキストで持つテキストエリアを生成
+		var $textArea = $('<textarea>');
+		$textArea.val(location.href);
+		$('body').append($textArea);
+
+		// テキストエリアを選択する
+		$textArea[0].select();
+
+		// 指定した範囲からコピーする
 		document.execCommand('copy');
-		console.log();
+		$textArea.remove();
 	});
 });
