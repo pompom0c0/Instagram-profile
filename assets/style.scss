@@ -271,7 +271,7 @@
 
 // modal //////////////////////////////////////////
 .modal {
-	// display: none;
+	display: none;
 	&__mask {
 		position: absolute;
 		left: 0;
@@ -368,13 +368,14 @@
 		&-wrap {
 			display: flex;
 			width: 600px;
-			overflow: hidden;
+			overflow-x: auto;
+			white-space: nowrap;
 			.js-slide-image {
-				display: none;
+				display: inline-block;
 			}
-			.active {
-				display: block;
-			}
+		}
+		&-wrap::-webkit-scrollbar {
+			display: none;
 		}
 		img {
 			width: 600px;
@@ -549,7 +550,7 @@
 }
 
 .modal-share {
-    // display: none;
+    display: none;
 	&__mask {
 		position: absolute;
 		left: 0;

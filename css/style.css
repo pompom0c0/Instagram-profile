@@ -428,6 +428,10 @@ body {
   margin: auto;
 }
 
+.modal {
+  display: none;
+}
+
 .modal__mask {
   position: absolute;
   left: 0;
@@ -542,15 +546,16 @@ body {
 .modal__img-wrap {
   display: flex;
   width: 600px;
-  overflow: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
 .modal__img-wrap .js-slide-image {
-  display: none;
+  display: inline-block;
 }
 
-.modal__img-wrap .active {
-  display: block;
+.modal__img-wrap::-webkit-scrollbar {
+  display: none;
 }
 
 .modal__img img {
@@ -749,6 +754,10 @@ body {
 
 .modal__comment-submit input.active:hover {
   cursor: pointer;
+}
+
+.modal-share {
+  display: none;
 }
 
 .modal-share__mask {
