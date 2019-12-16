@@ -843,3 +843,14 @@ body {
 .modal-share__text {
   padding: 8px 16px;
 }
+
+.modal-share__copy-link {
+  display: none;
+  background-color: #262625;
+  color: #fff;
+  padding: 1rem;
+  font-size: .8rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}

@@ -113,5 +113,11 @@ $(function() {
 		// 指定した範囲からコピーする
 		document.execCommand('copy');
 		$textArea.remove();
+
+		$('#modal-shar-link-copy').slideToggle(100, function() {
+			setTimeout(function() {
+				$('#modal-shar-link-copy').slideUp();
+			}, 5000);
+		});
 	});
 });
