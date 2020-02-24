@@ -6,19 +6,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Instagram | study</title>
 	<meta name="description" content="">
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
 </head>
 <body>
-	<!-- <div id="loader" class="loader">
-			<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-			width="64" height="64"
-			viewBox="0 0 172 172"
-			style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#bbbbbb"><path d="M61.64453,26.875c-19.08545,0 -34.76953,15.66309 -34.76953,34.76953v48.71094c0,19.08545 15.66309,34.76953 34.76953,34.76953h48.71094c19.08545,0 34.76953,-15.66308 34.76953,-34.76953v-48.71094c0,-19.08545 -15.66308,-34.76953 -34.76953,-34.76953zM61.64453,37.625h48.71094c13.29053,0 24.01953,10.72901 24.01953,24.01953v48.71094c0,13.29053 -10.72901,24.01953 -24.01953,24.01953h-48.71094c-13.29053,0 -24.01953,-10.72901 -24.01953,-24.01953v-48.71094c0,-13.29053 10.72901,-24.01953 24.01953,-24.01953zM117.74609,49.38281c-2.70849,0 -4.87109,2.1626 -4.87109,4.87109c0,2.70849 2.1626,4.87109 4.87109,4.87109c2.70849,0 4.87109,-2.1626 4.87109,-4.87109c0,-2.70849 -2.1626,-4.87109 -4.87109,-4.87109zM86,53.75c-17.7417,0 -32.25,14.5083 -32.25,32.25c0,17.7417 14.5083,32.25 32.25,32.25c17.7417,0 32.25,-14.5083 32.25,-32.25c0,-17.7417 -14.5083,-32.25 -32.25,-32.25zM86,64.5c11.94678,0 21.5,9.55322 21.5,21.5c0,11.94678 -9.55322,21.5 -21.5,21.5c-11.94678,0 -21.5,-9.55322 -21.5,-21.5c0,-11.94678 9.55322,-21.5 21.5,-21.5z"></path></g></g>
-		</svg>
-	</div> -->
-	<main id="main">
-		<header id="global-nav" class="global-nav">
+	<div class="loader js-loader">
+		<svg class="js-loader-img" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="64" height="64" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#bbbbbb"><path d="M61.64453,26.875c-19.08545,0 -34.76953,15.66309 -34.76953,34.76953v48.71094c0,19.08545 15.66309,34.76953 34.76953,34.76953h48.71094c19.08545,0 34.76953,-15.66308 34.76953,-34.76953v-48.71094c0,-19.08545 -15.66308,-34.76953 -34.76953,-34.76953zM61.64453,37.625h48.71094c13.29053,0 24.01953,10.72901 24.01953,24.01953v48.71094c0,13.29053 -10.72901,24.01953 -24.01953,24.01953h-48.71094c-13.29053,0 -24.01953,-10.72901 -24.01953,-24.01953v-48.71094c0,-13.29053 10.72901,-24.01953 24.01953,-24.01953zM117.74609,49.38281c-2.70849,0 -4.87109,2.1626 -4.87109,4.87109c0,2.70849 2.1626,4.87109 4.87109,4.87109c2.70849,0 4.87109,-2.1626 4.87109,-4.87109c0,-2.70849 -2.1626,-4.87109 -4.87109,-4.87109zM86,53.75c-17.7417,0 -32.25,14.5083 -32.25,32.25c0,17.7417 14.5083,32.25 32.25,32.25c17.7417,0 32.25,-14.5083 32.25,-32.25c0,-17.7417 -14.5083,-32.25 -32.25,-32.25zM86,64.5c11.94678,0 21.5,9.55322 21.5,21.5c0,11.94678 -9.55322,21.5 -21.5,21.5c-11.94678,0 -21.5,-9.55322 -21.5,-21.5c0,-11.94678 9.55322,-21.5 21.5,-21.5z"></path></g></g></svg>
+	</div>
+	<main class="main is-none">
+		<header class="global-nav js-global-nav">
 			<div class="global-nav__wrap">
 				<div class="global-nav__logo">
 					<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
@@ -26,7 +23,7 @@
 						viewBox="0 0 172 172"
 						style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#262626"><path d="M61.64453,26.875c-19.08545,0 -34.76953,15.66309 -34.76953,34.76953v48.71094c0,19.08545 15.66309,34.76953 34.76953,34.76953h48.71094c19.08545,0 34.76953,-15.66308 34.76953,-34.76953v-48.71094c0,-19.08545 -15.66308,-34.76953 -34.76953,-34.76953zM61.64453,37.625h48.71094c13.29053,0 24.01953,10.72901 24.01953,24.01953v48.71094c0,13.29053 -10.72901,24.01953 -24.01953,24.01953h-48.71094c-13.29053,0 -24.01953,-10.72901 -24.01953,-24.01953v-48.71094c0,-13.29053 10.72901,-24.01953 24.01953,-24.01953zM117.74609,49.38281c-2.70849,0 -4.87109,2.1626 -4.87109,4.87109c0,2.70849 2.1626,4.87109 4.87109,4.87109c2.70849,0 4.87109,-2.1626 4.87109,-4.87109c0,-2.70849 -2.1626,-4.87109 -4.87109,-4.87109zM86,53.75c-17.7417,0 -32.25,14.5083 -32.25,32.25c0,17.7417 14.5083,32.25 32.25,32.25c17.7417,0 32.25,-14.5083 32.25,-32.25c0,-17.7417 -14.5083,-32.25 -32.25,-32.25zM86,64.5c11.94678,0 21.5,9.55322 21.5,21.5c0,11.94678 -9.55322,21.5 -21.5,21.5c-11.94678,0 -21.5,-9.55322 -21.5,-21.5c0,-11.94678 9.55322,-21.5 21.5,-21.5z"></path></g></g>
 					</svg>
-					<img id="global-nav-logo" class="global-nav__logo--insta" src="images/logo.png">
+					<img class="global-nav__logo--insta js-global-nav-logo" src="images/logo.png">
 				</div>
 				<div class="global-nav__search">
 					<div class="global-nav__search-wrap">
@@ -39,159 +36,89 @@
 				</div>
 				<div class="global-nav__nav">
 					<div class="global-nav__nav-icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#262625"><path d="M7.16667,78.83333h21.5v14.33333h-21.5zM78.83333,143.33333h14.33333v21.5h-14.33333zM78.83333,7.16667h14.33333v21.5h-14.33333zM164.83333,86l-64.5,-28.66667l14.33333,28.66667l-14.33333,28.66667z"></path><path d="M122.55,120.4c-9.31667,9.31667 -22.21667,15.76667 -36.55,15.76667c-27.95,0 -50.16667,-22.21667 -50.16667,-50.16667c0,-27.95 22.21667,-50.16667 50.16667,-50.16667c14.33333,0 27.23333,6.45 36.55,15.76667l22.93333,10.03333c-9.31667,-23.65 -32.25,-40.13333 -59.48333,-40.13333c-35.83333,0 -64.5,28.66667 -64.5,64.5c0,35.83333 28.66667,64.5 64.5,64.5c27.23333,0 50.16667,-16.48333 60.2,-40.13333z"></path></g></g></svg></div>
-					<div id="global-nav-heart" class="global-nav__nav-icon global-nav__icon--heart"><img src="https://img.icons8.com/ios/32/000000/like.png"></div>
+					<div class="global-nav__nav-icon global-nav__icon--heart js-global-nav-heart"><img src="https://img.icons8.com/ios/32/000000/like.png"></div>
 					<div class="global-nav__nav-icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#262625"><path d="M86,21.5c-17.7627,0 -32.25,14.4873 -32.25,32.25c0,17.7627 14.4873,32.25 32.25,32.25c17.7627,0 32.25,-14.4873 32.25,-32.25c0,-17.7627 -14.4873,-32.25 -32.25,-32.25zM86,86c-29.60449,0 -53.75,24.14551 -53.75,53.75h10.75c0,-23.80957 19.19043,-43 43,-43c23.80957,0 43,19.19043 43,43h10.75c0,-29.60449 -24.14551,-53.75 -53.75,-53.75zM86,32.25c11.92578,0 21.5,9.57422 21.5,21.5c0,11.92578 -9.57422,21.5 -21.5,21.5c-11.92578,0 -21.5,-9.57422 -21.5,-21.5c0,-11.92578 9.57422,-21.5 21.5,-21.5z"></path></g></g></svg></div>
 				</div>
-
 			</div>
 		</header>
 		<section class="photo">
 			<div class="js-photo-hover photo__box">
-				<a class="photo__img">
+				<a class="photo__img js-photo-img">
 					<img src="images/photo/01.jpg">
-					<div class="photo__mask">
+					<div class="photo__mask js-photo-mask">
 						<div><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M86,152.38125l-2.19031,-1.81406c-3.44,-2.84875 -8.0625,-5.99312 -13.39719,-9.63469c-21.19094,-14.45875 -53.2125,-36.30812 -53.2125,-71.15156c0,-21.40594 17.53594,-38.82094 39.08969,-38.82094c11.52938,0 22.31969,5.01219 29.71031,13.61219c7.39063,-8.6 18.19438,-13.61219 29.71031,-13.61219c21.55375,0 39.08969,17.415 39.08969,38.82094c0,34.84344 -32.02156,56.69281 -53.2125,71.15156c-5.34812,3.64156 -9.95719,6.78594 -13.39719,9.63469z"></path></g></g></svg></div>
 					</div>
 				</a>
 			</div>
 			<div class="js-photo-hover photo__box">
-				<a class="photo__img">
+				<a class="photo__img js-photo-img">
 					<img src="images/photo/11.jpg">
-					<div class="photo__mask">
+					<div class="photo__mask js-photo-mask">
 						<div><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M86,152.38125l-2.19031,-1.81406c-3.44,-2.84875 -8.0625,-5.99312 -13.39719,-9.63469c-21.19094,-14.45875 -53.2125,-36.30812 -53.2125,-71.15156c0,-21.40594 17.53594,-38.82094 39.08969,-38.82094c11.52938,0 22.31969,5.01219 29.71031,13.61219c7.39063,-8.6 18.19438,-13.61219 29.71031,-13.61219c21.55375,0 39.08969,17.415 39.08969,38.82094c0,34.84344 -32.02156,56.69281 -53.2125,71.15156c-5.34812,3.64156 -9.95719,6.78594 -13.39719,9.63469z"></path></g></g></svg></div>
 					</div>
 				</a>
 			</div>
 			<div class="js-photo-hover photo__box">
-				<a class="photo__img">
+				<a class="photo__img js-photo-img">
 					<img src="images/photo/21.jpg">
-					<div class="photo__mask">
+					<div class="photo__mask js-photo-mask">
 						<div><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M86,152.38125l-2.19031,-1.81406c-3.44,-2.84875 -8.0625,-5.99312 -13.39719,-9.63469c-21.19094,-14.45875 -53.2125,-36.30812 -53.2125,-71.15156c0,-21.40594 17.53594,-38.82094 39.08969,-38.82094c11.52938,0 22.31969,5.01219 29.71031,13.61219c7.39063,-8.6 18.19438,-13.61219 29.71031,-13.61219c21.55375,0 39.08969,17.415 39.08969,38.82094c0,34.84344 -32.02156,56.69281 -53.2125,71.15156c-5.34812,3.64156 -9.95719,6.78594 -13.39719,9.63469z"></path></g></g></svg></div>
 					</div>
 				</a>
 			</div>
 			<div class="js-photo-hover photo__box">
-				<a class="photo__img">
+				<a class="photo__img js-photo-img">
 					<img src="images/photo/01.jpg">
-					<div class="photo__mask">
+					<div class="photo__mask js-photo-mask">
 						<div><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M86,152.38125l-2.19031,-1.81406c-3.44,-2.84875 -8.0625,-5.99312 -13.39719,-9.63469c-21.19094,-14.45875 -53.2125,-36.30812 -53.2125,-71.15156c0,-21.40594 17.53594,-38.82094 39.08969,-38.82094c11.52938,0 22.31969,5.01219 29.71031,13.61219c7.39063,-8.6 18.19438,-13.61219 29.71031,-13.61219c21.55375,0 39.08969,17.415 39.08969,38.82094c0,34.84344 -32.02156,56.69281 -53.2125,71.15156c-5.34812,3.64156 -9.95719,6.78594 -13.39719,9.63469z"></path></g></g></svg></div>
 					</div>
 				</a>
 			</div>
 			<div class="js-photo-hover photo__box">
-				<a class="photo__img">
+				<a class="photo__img js-photo-img">
 					<img src="images/photo/11.jpg">
-					<div class="photo__mask">
+					<div class="photo__mask js-photo-mask">
 						<div><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M86,152.38125l-2.19031,-1.81406c-3.44,-2.84875 -8.0625,-5.99312 -13.39719,-9.63469c-21.19094,-14.45875 -53.2125,-36.30812 -53.2125,-71.15156c0,-21.40594 17.53594,-38.82094 39.08969,-38.82094c11.52938,0 22.31969,5.01219 29.71031,13.61219c7.39063,-8.6 18.19438,-13.61219 29.71031,-13.61219c21.55375,0 39.08969,17.415 39.08969,38.82094c0,34.84344 -32.02156,56.69281 -53.2125,71.15156c-5.34812,3.64156 -9.95719,6.78594 -13.39719,9.63469z"></path></g></g></svg></div>
 					</div>
 				</a>
 			</div>
 			<div class="js-photo-hover photo__box">
-				<a class="photo__img">
+				<a class="photo__img js-photo-img">
 					<img src="images/photo/21.jpg">
-					<div class="photo__mask">
+					<div class="photo__mask js-photo-mask">
 						<div><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M86,152.38125l-2.19031,-1.81406c-3.44,-2.84875 -8.0625,-5.99312 -13.39719,-9.63469c-21.19094,-14.45875 -53.2125,-36.30812 -53.2125,-71.15156c0,-21.40594 17.53594,-38.82094 39.08969,-38.82094c11.52938,0 22.31969,5.01219 29.71031,13.61219c7.39063,-8.6 18.19438,-13.61219 29.71031,-13.61219c21.55375,0 39.08969,17.415 39.08969,38.82094c0,34.84344 -32.02156,56.69281 -53.2125,71.15156c-5.34812,3.64156 -9.95719,6.78594 -13.39719,9.63469z"></path></g></g></svg></div>
 					</div>
 				</a>
 			</div>
 			<div class="js-photo-hover photo__box">
-				<a class="photo__img">
+				<a class="photo__img js-photo-img">
 					<img src="images/photo/01.jpg">
-					<div class="photo__mask">
+					<div class="photo__mask js-photo-mask">
 						<div><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M86,152.38125l-2.19031,-1.81406c-3.44,-2.84875 -8.0625,-5.99312 -13.39719,-9.63469c-21.19094,-14.45875 -53.2125,-36.30812 -53.2125,-71.15156c0,-21.40594 17.53594,-38.82094 39.08969,-38.82094c11.52938,0 22.31969,5.01219 29.71031,13.61219c7.39063,-8.6 18.19438,-13.61219 29.71031,-13.61219c21.55375,0 39.08969,17.415 39.08969,38.82094c0,34.84344 -32.02156,56.69281 -53.2125,71.15156c-5.34812,3.64156 -9.95719,6.78594 -13.39719,9.63469z"></path></g></g></svg></div>
 					</div>
 				</a>
 			</div>
 			<div class="js-photo-hover photo__box">
-				<a class="photo__img">
+				<a class="photo__img js-photo-img">
 					<img src="images/photo/11.jpg">
+					<div class="photo__mask js-photo-mask">
+						<div><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M86,152.38125l-2.19031,-1.81406c-3.44,-2.84875 -8.0625,-5.99312 -13.39719,-9.63469c-21.19094,-14.45875 -53.2125,-36.30812 -53.2125,-71.15156c0,-21.40594 17.53594,-38.82094 39.08969,-38.82094c11.52938,0 22.31969,5.01219 29.71031,13.61219c7.39063,-8.6 18.19438,-13.61219 29.71031,-13.61219c21.55375,0 39.08969,17.415 39.08969,38.82094c0,34.84344 -32.02156,56.69281 -53.2125,71.15156c-5.34812,3.64156 -9.95719,6.78594 -13.39719,9.63469z"></path></g></g></svg></div>
+					</div>
 				</a>
 			</div>
 			<div class="js-photo-hover photo__box">
-				<a class="photo__img">
+				<a class="photo__img js-photo-img">
 					<img src="images/photo/21.jpg">
-				</a>
-			</div>
-			<div class="js-photo-hover photo__box">
-				<a class="photo__img">
-					<img src="images/photo/01.jpg">
-				</a>
-			</div>
-			<div class="js-photo-hover photo__box">
-				<a class="photo__img">
-					<img src="images/photo/11.jpg">
-				</a>
-			</div>
-			<div class="js-photo-hover photo__box">
-				<a class="photo__img">
-					<img src="images/photo/21.jpg">
-				</a>
-			</div>
-			<div class="js-photo-hover photo__box">
-				<a class="photo__img">
-					<img src="images/photo/01.jpg">
-				</a>
-			</div>
-			<div class="js-photo-hover photo__box">
-				<a class="photo__img">
-					<img src="images/photo/11.jpg">
-				</a>
-			</div>
-			<div class="js-photo-hover photo__box">
-				<a class="photo__img">
-					<img src="images/photo/21.jpg">
-				</a>
-			</div>
-			<div class="js-photo-hover photo__box">
-				<a class="photo__img">
-					<img src="images/photo/01.jpg">
-				</a>
-			</div>
-			<div class="js-photo-hover photo__box">
-				<a class="photo__img">
-					<img src="images/photo/11.jpg">
-				</a>
-			</div>
-			<div class="js-photo-hover photo__box">
-				<a class="photo__img">
-					<img src="images/photo/21.jpg">
-				</a>
-			</div>
-			<div class="js-photo-hover photo__box">
-				<a class="photo__img">
-					<img src="images/photo/01.jpg">
-				</a>
-			</div>
-			<div class="js-photo-hover photo__box">
-				<a class="photo__img">
-					<img src="images/photo/11.jpg">
-				</a>
-			</div>
-			<div class="js-photo-hover photo__box">
-				<a class="photo__img">
-					<img src="images/photo/21.jpg">
-				</a>
-			</div>
-			<div class="js-photo-hover photo__box">
-				<a class="photo__img">
-					<img src="images/photo/01.jpg">
-				</a>
-			</div>
-			<div class="js-photo-hover photo__box">
-				<a class="photo__img">
-					<img src="images/photo/11.jpg">
-				</a>
-			</div>
-			<div class="js-photo-hover photo__box">
-				<a class="photo__img">
-					<img src="images/photo/21.jpg">
+					<div class="photo__mask js-photo-mask">
+						<div><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M86,152.38125l-2.19031,-1.81406c-3.44,-2.84875 -8.0625,-5.99312 -13.39719,-9.63469c-21.19094,-14.45875 -53.2125,-36.30812 -53.2125,-71.15156c0,-21.40594 17.53594,-38.82094 39.08969,-38.82094c11.52938,0 22.31969,5.01219 29.71031,13.61219c7.39063,-8.6 18.19438,-13.61219 29.71031,-13.61219c21.55375,0 39.08969,17.415 39.08969,38.82094c0,34.84344 -32.02156,56.69281 -53.2125,71.15156c-5.34812,3.64156 -9.95719,6.78594 -13.39719,9.63469z"></path></g></g></svg></div>
+					</div>
 				</a>
 			</div>
 		</section>
-		<div id="nav-like" class="nav-like">
-			<div id="nav-like-mask" class="nav-like__mask">
+		<div class="nav-like js-nav-like">
+			<div class="nav-like__mask js-nav-like-mask">
 				<div class="nav-like__body">
-					<ul id="nav-like-modal" class="nav-like__wrap">
+					<ul class="nav-like__wrap js-nav-like-modal">
 						<li class="nav-like__list">
 							<div class="nav-like__list-img">
 								<img src="https://scontent-nrt1-1.cdninstagram.com/vp/f11eedafa61a52fb36380163eba3966f/5E36A314/t51.2885-19/s150x150/11875390_1640475839575400_2050288559_a.jpg?_nc_ht=scontent-nrt1-1.cdninstagram.com">
@@ -284,33 +211,19 @@
 				</div>
 			</div>
 		</div>
-		<div id="modal" class="modal">
+		<div class="modal js-modal">
 			<div class="modal__mask">
 				<div class="modal__close">
 					<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M45.74349,34.28802c-4.66401,0.00578 -8.85992,2.83567 -10.61285,7.15775c-1.75292,4.32207 -0.71362,9.27524 2.62873,12.52819l32.02604,32.02604l-32.02604,32.02604c-2.99552,2.87604 -4.20218,7.14678 -3.15461,11.16516c1.04756,4.01838 4.18566,7.15647 8.20404,8.20403c4.01838,1.04756 8.28912,-0.1591 11.16516,-3.15462l32.02604,-32.02604l32.02604,32.02604c2.87603,2.99556 7.14679,4.20225 11.1652,3.1547c4.0184,-1.04756 7.15652,-4.18567 8.20408,-8.20408c1.04756,-4.0184 -0.15913,-8.28917 -3.1547,-11.1652l-32.02604,-32.02604l32.02604,-32.02604c3.39139,-3.29657 4.4111,-8.33702 2.56778,-12.6926c-1.84331,-4.35558 -6.17151,-7.13275 -10.89903,-6.99334c-2.97902,0.08876 -5.80647,1.33381 -7.88333,3.47135l-32.02604,32.02604l-32.02604,-32.02604c-2.16155,-2.22196 -5.13056,-3.4742 -8.23047,-3.47135z"></path></g></g></svg>
 				</div>
-				<div id="modal-wrap" class="modal__wrap">
+				<div id="modal-wrap" class="modal__wrap js-modal-wrap">
 					<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="26" height="26" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M96.49159,23.72236l-62.27765,62.27764l62.27765,62.27765l18.70913,-18.70913l-43.56851,-43.56851l43.56851,-43.56851z"></path></g></g></svg>
 					<div class="modal__contents">
-						<div class="modal__arrow modal__arrow-left">
-							<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M110.55031,10.535c-0.90031,0 -1.74688,0.36281 -2.39188,0.99438l-72.52219,71.94437c-1.35719,1.34375 -1.37062,3.52063 -0.02687,4.86438l71.94437,72.53562c1.34375,1.34375 3.52063,1.35719 4.86438,0.01344l20.72062,-20.54594c1.35719,-1.34375 1.37063,-3.52062 0.02688,-4.87781l-48.96625,-49.35594l49.36937,-48.96625c1.34375,-1.34375 1.35719,-3.52062 0.01344,-4.86437l-20.54594,-20.72063c-0.65844,-0.67187 -1.55875,-1.03469 -2.48594,-1.02125z"></path></g></g></svg>
-						</div>
 						<div class="modal__img">
-							<ul class="modal__img-wrap js-slide">
-								<li class="js-slide-image active"><img src="images/photo/01.jpg"></li>
-								<li class="js-slide-image"><img src="images/photo/02.jpg"></li>
-								<li class="js-slide-image"><img src="images/photo/03.jpg"></li>
-							</ul>
-							<div class="modal__img-dot-wrap">
-								<ul class="modal__img-dot">
-									<li class="js-dot dot js-dot-color"><span></span></li>
-									<li class="js-dot dot"><span></span></li>
-									<li class="js-dot dot"><span></span></li>
-								</ul>
-							</div>
-							<div class="modal__img-pager">
-								<span class="js-change-btn prev">●</span>
-								<span class="js-change-btn next">●</span>
+							<div class="modal__img-wrap js-slide js-modal-img main-carousel">
+								<div class="js-slide-image js-slide-image-01 carousel-cell"><img src="images/photo/01.jpg"></div>
+								<div class="js-slide-image js-slide-image-02 carousel-cell"><img src="images/photo/02.jpg"></div>
+								<div class="js-slide-image js-slide-image-03 carousel-cell"><img src="images/photo/03.jpg"></div>
 							</div>
 						</div>
 						<div class="modal__text">
@@ -325,7 +238,7 @@
 									<img src="https://img.icons8.com/ios-glyphs/50/000000/menu-2.png">
 								</div>
 							</div>
-							<div id="modal-post-comment" class="modal__post">
+							<div class="modal__post js-modal-post-comment">
 								<div class="modal__post-content">
 									<div class="modal__post-img">
 										<img src="https://scontent-nrt1-1.cdninstagram.com/vp/f11eedafa61a52fb36380163eba3966f/5E36A314/t51.2885-19/s150x150/11875390_1640475839575400_2050288559_a.jpg?_nc_ht=scontent-nrt1-1.cdninstagram.com">
@@ -355,9 +268,9 @@
 							<div class="modal__text-bottom">
 								<div class="modal__details">
 									<ul class="modal__details-icons">
-										<li id="modal-icon-heart" class="modal__icon"><img src="images/icon/icon-heart-border.png"></li>
+										<li class="modal__icon js-modal-icon-heart"><img src="images/icon/icon-heart-border.png"></li>
 										<li class="modal__icon modal__icon-comment"><img src="https://img.icons8.com/ios/32/000000/topic.png"></li>
-										<li id="modal-icon-share" class="modal__icon modal__icon-share"><img src="https://img.icons8.com/ios/64/000000/upload.png"></li>
+										<li class="modal__icon modal__icon-share js-modal-icon-share"><img src="https://img.icons8.com/ios/64/000000/upload.png"></li>
 										<li class="modal__icon modal__icon-save"><img src="https://img.icons8.com/ios/50/000000/cancer-ribbon.png"></li>
 									</ul>
 									<div class="modal__users">
@@ -372,31 +285,28 @@
 								</div>
 								<div class="modal__comment">
 									<form class="modal__comment-form">
-										<textarea id="modal-comment-area" class="modal__comment-textarea" type="text" name="comment" rows="1" placeholder="コメントを追加..."></textarea>
-										<div id="modal-comment-submit" class="modal__comment-submit">
+										<textarea class="modal__comment-textarea js-modal-comment-area" type="text" name="comment" rows="1" placeholder="コメントを追加..."></textarea>
+										<div class="modal__comment-submit js-modal-comment-submit">
 											<input type="submit" value="投稿する">
 										</div>
 									</form>
 								</div>
 							</div>
 						</div>
-						<div class="modal__arrow modal__arrow-right">
-							<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M62.39031,10.32c-0.90031,0.01344 -1.74688,0.36281 -2.39188,0.99438l-20.72062,20.55937c-1.34375,1.34375 -1.35719,3.52063 -0.02688,4.86438l48.96625,49.36937l-49.35594,48.96625c-1.35719,1.34375 -1.37062,3.52063 -0.02687,4.86438l20.55937,20.72062c1.34375,1.35719 3.52063,1.37063 4.86438,0.02688l72.53562,-71.94438c1.34375,-1.34375 1.35719,-3.52062 0.01344,-4.87781l-71.93094,-72.52219c-0.65844,-0.67187 -1.55875,-1.03469 -2.48594,-1.02125z"></path></g></g></svg>
-						</div>
 					</div>
 					<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="26" height="26" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M75.50842,23.72236l-18.70913,18.70913l43.56851,43.56851l-43.56851,43.56851l18.70913,18.70913l62.27764,-62.27765z"></path></g></g></svg>
 				</div>
-				<div id="modal-shar-link-copy" class="modal-share__copy-link">
+				<div class="modal-share__copy-link js-modal-share-link-copy">
 					<p>リンクがクリップボードにコピーされました。</p>
 				</div>
 			</div>
 		</div>
-		<div id="modal-share" class="modal-share">
-			<div id="modal-share-mask" class="modal-share__mask">
+		<div class="modal-share js-modal-share">
+			<div class="modal-share__mask js-modal-share-mask">
 				<div class="modal-share__wrap">
 					<div class="modal-share__heading">
 						<p class="modal-share__title">シェアする</p>
-						<div id="modal-share-close" class="modal-share__close">
+						<div class="modal-share__close js-modal-share-close">
 							<img src="https://img.icons8.com/ios/50/000000/delete-sign.png">
 						</div>
 					</div>
@@ -405,7 +315,7 @@
 						<li class="modal-share__list"><a href=""><span class="modal-share__icon"><img src="https://img.icons8.com/ios-filled/50/000000/facebook-messenger.png"></span><p class="modal-share__text">Messengerでシェア</p></a></li>
 						<li class="modal-share__list"><a href=""><span class="modal-share__icon"><img src="https://img.icons8.com/ios-filled/50/000000/twitter.png"></span><p class="modal-share__text">Twitterでシェア</p></a></li>
 						<li class="modal-share__list"><a href=""><span class="modal-share__icon"><img src="https://img.icons8.com/ios-filled/50/000000/important-mail.png"></span><p class="modal-share__text">メールでシェア</p></a></li>
-						<li id="modal-share-link" class="modal-share__list"><a id="modal-share-link-copy"><span class="modal-share__icon"><img src="https://img.icons8.com/ios-filled/50/000000/link.png"></span><p class="modal-share__text">リンクをコピー</p></a></li>
+						<li class="modal-share__list js-modal-share-link"><a id="modal-share-link-copy"><span class="modal-share__icon"><img src="https://img.icons8.com/ios-filled/50/000000/link.png"></span><p class="modal-share__text">リンクをコピー</p></a></li>
 						<li class="modal-share__list modal-share__list--noicon"><a href="">キャンセル</a></li>
 					</ul>
 				</div>
@@ -413,9 +323,9 @@
 		</div>
 	</main>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="js/jquery.complete.js"></script>
 	<script src="js/header.js"></script>
 	<script src="js/modal.js"></script>
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 	<script src="js/script.js"></script>
 	<script src="js/loading.js"></script>
 </body>

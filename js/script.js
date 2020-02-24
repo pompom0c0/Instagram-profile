@@ -1,10 +1,11 @@
 $(function() {
+	var $photo_mask = $('.js-photo-mask')
 	$('.js-photo-hover').hover(
 		function() {
-			$(this).find('.photo__mask').show();
+			$(this).find($photo_mask).show();
 		},
 		function() {
-			$(this).find('.photo__mask').hide();
+			$(this).find($photo_mask).hide();
 		}
 	);
 });

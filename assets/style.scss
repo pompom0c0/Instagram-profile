@@ -41,6 +41,14 @@
 	overflow: hidden;
 }
 
+.is-none {
+	display: none;
+}
+
+.is-block {
+	display: block;
+}
+
 // header /////////////////////////////////////////
 .global-nav {
 	text-transform: uppercase;
@@ -231,10 +239,26 @@
 	}
 }
 
+// loader /////////////////////////////////////////
+.loader {
+	background: #fff;
+	z-index: 100;
+	svg {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+	}
+}
+
+
 // profile ////////////////////////////////////////
 .photo {
 	width: 965px;
-	margin: 10rem auto 0;
+	margin: 0 auto;
+	padding-top: 10rem;
 	display: flex;
 	flex-wrap: wrap;
 	&__box {
@@ -273,7 +297,7 @@
 .modal {
 	display: none;
 	&__mask {
-		position: absolute;
+		position: fixed;
 		left: 0;
 		top: 0;
 		z-index: 10;
@@ -320,6 +344,7 @@
 	}
 	&__img {
 		position: relative;
+		overflow: hidden;
 		&-dot-wrap {
 			position: absolute;
 			bottom: 10px;
@@ -634,5 +659,34 @@
 		position: absolute;
 		bottom: 0;
 		width: 100%;
+	}
+}
+
+.flickity-enabled {
+	position: static;
+}
+
+.flickity-viewport {
+	height: 600px !important;
+	position: static;
+}
+
+.carousel-cell {
+	width: 100%;
+	height: 600px;
+	position: relative;
+}
+
+.flickity-button {
+	width: 25px;
+	height: 25px;
+}
+.flickity-page-dots {
+	bottom: 15px;
+	.dot {
+		background: #fff;
+		margin: 0 4px 0 0;
+		width: 6px;
+		height: 6px;
 	}
 }
