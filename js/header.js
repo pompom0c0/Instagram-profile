@@ -21,7 +21,7 @@ $(function() {
 		}
   });
 
-  $('.js-global-nav-heart').on('click', () => {
+  $('.js-global-nav-heart').on('click', function() {
     $nav_like.show();
   });
 
@@ -30,4 +30,8 @@ $(function() {
       $nav_like.hide();
     }
   });
+
+  if($('.js-global-nav-input').focus()) {
+    $('.global-nav__search-icon').show();
+  }
 });

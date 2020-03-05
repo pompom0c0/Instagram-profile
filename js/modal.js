@@ -1,16 +1,4 @@
 $(function() {
-	$('.js-photo-img').on('click', function() {
-		$('.js-modal').show();
-		$('body').addClass('scroll-none');
-	});
-
-	$('.js-modal').on('click', function(e) {
-		if ($(e.target).parents('.js-modal-wrap').length === 0) {
-			$(this).hide();
-			$('body').removeClass('scroll-none');
-		}
-	});
-
 	// コメント欄の高さ調節
 	const commentTextarea = document.querySelector('.js-modal-comment-area');
 	commentTextarea.addEventListener('input', function() {
@@ -101,10 +89,24 @@ $(function() {
 
 $(window).on('load', function() {
 	$('.js-photo-img').on('click', function() {
+		$('.js-modal').show();
+		$('body').addClass('scroll-none');
+		console.log('modal');
 		$('.main-carousel').flickity({
-			// options
 			cellAlign: 'left',
 			contain: true
 		});
+		console.log('slider');
+	});
+
+	$('.js-modal').on('click', function(e) {
+		if ($(e.target).parents('.js-modal-wrap').length === 0) {
+			$(this).hide();
+			$('body').removeClass('scroll-none');
+			$('.flickity-slider').css('transform', 'translateX(0%)');
+			$('.carousel-cell').removeClass('is-selected');
+			$('.carousel-cell:first').addClass('is-selected');
+			console.log('modal-close');
+		}
 	});
 });
